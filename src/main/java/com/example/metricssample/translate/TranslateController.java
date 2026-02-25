@@ -4,8 +4,8 @@ package com.example.metricssample.translate;
 import com.example.metricssample.common.ProjectConfigs;
 import com.google.api.gax.retrying.RetrySettings;
 import com.google.api.gax.tracing.ApiTracerFactory;
-import com.google.api.gax.tracing.OpenTelemetryTracingRecorder;
-import com.google.api.gax.tracing.TracingTracerFactory;
+import com.google.api.gax.tracing.OpenTelemetryTraceManager;
+import com.google.api.gax.tracing.SpanTracerFactory;
 import com.google.cloud.translate.v3.LocationName;
 import com.google.cloud.translate.v3.TranslateTextResponse;
 import com.google.cloud.translate.v3.TranslationServiceClient;
@@ -53,7 +53,7 @@ public class TranslateController {
   }
 
   private ApiTracerFactory createOpenTelemetryTracerFactory() {
-    return new TracingTracerFactory(new OpenTelemetryTracingRecorder(openTelemetry));
+    return new SpanTracerFactory(new OpenTelemetryTraceManager(openTelemetry));
   }
 
   @GetMapping(path = "/{text}", produces = "application/json")

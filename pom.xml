@@ -39,13 +39,6 @@
                 <type>pom</type>
                 <scope>import</scope>
             </dependency>
-            <dependency>
-                <groupId>com.google.cloud</groupId>
-                <artifactId>libraries-bom</artifactId>
-                <version>26.75.0</version>
-                <type>pom</type>
-                <scope>import</scope>
-            </dependency>
         </dependencies>
     </dependencyManagement>
     <dependencies>
@@ -75,12 +68,12 @@
         <dependency>
             <groupId>com.google.api</groupId>
             <artifactId>gax</artifactId>
-            <version>2.74.2-SNAPSHOT</version>
+            <version>2.75.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.google.api</groupId>
             <artifactId>gax-grpc</artifactId>
-            <version>2.74.2-SNAPSHOT</version>
+            <version>2.75.1-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>io.opentelemetry</groupId>
@@ -98,6 +91,7 @@
         <dependency>
             <groupId>com.google.cloud</groupId>
             <artifactId>google-cloud-translate</artifactId>
+            <version>2.86.0-SNAPSHOT</version>
         </dependency>
         <dependency>
             <groupId>com.google.cloud</groupId>
